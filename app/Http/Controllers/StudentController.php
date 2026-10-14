@@ -32,8 +32,9 @@ class StudentController extends Controller
      $validated = $request->validate([
         'name'=>'required',
         'age'=>'required',
-        'course'=>'required'
+        'email'=>'required|email'
      ]);
+
      Student::create($validated);
      return redirect()->route('student.index')->with('success',"Student Created Successfully");
     }
@@ -63,7 +64,7 @@ class StudentController extends Controller
        $validated = $request->validate([
         'name'=>'required',
         'age'=>'required',
-        'course'=>'required'
+        'email'=>'required|email'
        ]);
        $student = Student::findOrFail($id);  //find the post
        $student->update($validated);   // Update the post with new

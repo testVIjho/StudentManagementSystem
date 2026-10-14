@@ -18,7 +18,7 @@
         <th>ID</th>
                 <th>Name</th>
                 <th>Age</th>
-                <th>Course</th>
+                <th>Email</th>
                 <th>Actions</th>
 
     </tr>
@@ -29,7 +29,7 @@
     <td>{{$student->id}}</td>
     <td>{{$student->name}}</td>
     <td>{{$student->age}}</td>
-    <td>{{$student->course}}</td>
+    <td>{{$student->email}}</td>
     <td>
         <a href="{{route('student.edit',$student->id)}}" class="btn btn-warning btn-sm">Edit</a>
         <form action="{{route('student.destroy',$student->id)}}" method="POST" class="d-inline" >

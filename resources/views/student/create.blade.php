@@ -47,16 +47,16 @@
                     @enderror
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Course</label>
+                    <label class="form-label">Email</label>
 
                     <input
                         type="text"
-                        name="course"
-                        class="form-control @error('course') is-invalid @enderror"
-                        value="{{ old('course') }}"
+                        name="email"
+                        class="form-control @error('email') is-invalid @enderror"
+                        value="{{ old('email') }}"
                     >
 
-                    @error('course')
+                    @error('email')
                         <div class="invalid-feedback">
                             {{ $message }}
                         </div>
